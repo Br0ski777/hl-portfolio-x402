@@ -37,6 +37,60 @@ Do NOT use for trade history -- use hyperliquid_get_trade_fills instead. Do NOT 
         },
         required: ["address"],
       },
+      outputSchema: {
+          "type": "object",
+          "properties": {
+            "accountValue": {
+              "type": "string",
+              "description": "Total account equity in USD"
+            },
+            "totalNtlPos": {
+              "type": "string",
+              "description": "Total notional position size"
+            },
+            "totalMarginUsed": {
+              "type": "string",
+              "description": "Margin locked in positions"
+            },
+            "withdrawable": {
+              "type": "string",
+              "description": "Available balance"
+            },
+            "positions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "coin": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "string"
+                  },
+                  "entryPrice": {
+                    "type": "string"
+                  },
+                  "unrealizedPnl": {
+                    "type": "string"
+                  },
+                  "leverage": {
+                    "type": "number"
+                  },
+                  "liquidationPrice": {
+                    "type": "string"
+                  },
+                  "marginType": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "required": [
+            "accountValue",
+            "positions"
+          ]
+        },
     },
     {
       method: "POST",
@@ -77,6 +131,48 @@ Do NOT use for current positions -- use hyperliquid_get_account_state instead. D
         },
         required: ["address"],
       },
+      outputSchema: {
+          "type": "object",
+          "properties": {
+            "fills": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "coin": {
+                    "type": "string"
+                  },
+                  "side": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "string"
+                  },
+                  "fee": {
+                    "type": "string"
+                  },
+                  "closedPnl": {
+                    "type": "string"
+                  },
+                  "timestamp": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "count": {
+              "type": "number",
+              "description": "Number of fills returned"
+            }
+          },
+          "required": [
+            "fills",
+            "count"
+          ]
+        },
     },
     {
       method: "POST",
@@ -112,6 +208,48 @@ Do NOT use for executed trades -- use hyperliquid_get_trade_fills instead. Do NO
         },
         required: ["address"],
       },
+      outputSchema: {
+          "type": "object",
+          "properties": {
+            "orders": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "coin": {
+                    "type": "string"
+                  },
+                  "side": {
+                    "type": "string"
+                  },
+                  "limitPx": {
+                    "type": "string"
+                  },
+                  "sz": {
+                    "type": "string"
+                  },
+                  "orderType": {
+                    "type": "string"
+                  },
+                  "reduceOnly": {
+                    "type": "boolean"
+                  },
+                  "oid": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "count": {
+              "type": "number",
+              "description": "Number of open orders"
+            }
+          },
+          "required": [
+            "orders",
+            "count"
+          ]
+        },
     },
     {
       method: "POST",
@@ -148,6 +286,46 @@ Do NOT use for current positions -- use hyperliquid_get_account_state instead. D
         },
         required: ["address"],
       },
+      outputSchema: {
+          "type": "object",
+          "properties": {
+            "funding": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "coin": {
+                    "type": "string"
+                  },
+                  "fundingRate": {
+                    "type": "string"
+                  },
+                  "payment": {
+                    "type": "string"
+                  },
+                  "timestamp": {
+                    "type": "number"
+                  },
+                  "positionSize": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "totalReceived": {
+              "type": "string"
+            },
+            "totalPaid": {
+              "type": "string"
+            },
+            "netFunding": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "funding"
+          ]
+        },
     },
   ],
 };
