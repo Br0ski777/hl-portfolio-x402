@@ -1,1 +1,18 @@
-{"$schema":"https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json","name":"io.github.Br0ski777/hl-portfolio","title":"HL Portfolio API","description":"Hyperliquid account analysis: positions, PnL, fills, orders, funding. x402 pay-per-call.","version":"1.0.0","websiteUrl":"https://github.com/Br0ski777/hl-portfolio-x402","repository":{"url":"https://github.com/Br0ski777/hl-portfolio-x402","source":"github"},"remotes":[{"type":"sse","url":"https://hl-portfolio-x402-production.up.railway.app/mcp"}]}
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Br0ski777/hl-portfolio",
+  "title": "HL Portfolio API",
+  "description": "Hyperliquid account analysis: positions, PnL, fills, orders, funding. x402 pay-per-call.",
+  "version": "1.0.1",
+  "websiteUrl": "https://github.com/Br0ski777/hl-portfolio-x402",
+  "repository": {
+    "url": "https://github.com/Br0ski777/hl-portfolio-x402",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "sse",
+      "url": "https://hl-portfolio-x402-production.up.railway.app/mcp"
+    }
+  ]
+}
