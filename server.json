@@ -12,7 +12,7 @@
   "remotes": [
     {
       "type": "sse",
-      "url": "https://hl-portfolio-x402-production.up.railway.app/mcp"
+      "url": "https://hl-portfolio.api.klymax402.com/mcp"
     }
   ]
 }
