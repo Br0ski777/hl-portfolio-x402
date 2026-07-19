@@ -37,10 +37,10 @@ Any x402-aware client ([`@x402/fetch`](https://www.npmjs.com/package/@x402/fetch
 
 | Tool | Method | Path | Price | Description |
 |---|---|---|---|---|
-| `hyperliquid_get_account_state` | POST | `/api/account` | $0.003 | Full clearinghouse state for a Hyperliquid wallet: positions, margin, PnL, leverage, liquidation prices. |
-| `hyperliquid_get_trade_fills` | POST | `/api/fills` | $0.003 | Recent trade fills for a Hyperliquid wallet: coin, side, size, price, fee, closedPnl, timestamp. |
-| `hyperliquid_get_open_orders` | POST | `/api/orders` | $0.002 | Open orders for a Hyperliquid wallet: coin, side, size, price, order type, reduce-only flag. |
-| `hyperliquid_get_user_funding` | POST | `/api/funding` | $0.002 | Funding payments received/paid by a Hyperliquid wallet: coin, amount, rate, timestamp. |
+| `hyperliquid_get_account_state` | POST | `/api/account` | $0.008 | Full clearinghouse state for a Hyperliquid wallet: positions, margin, PnL, leverage, liquidation prices. |
+| `hyperliquid_get_trade_fills` | POST | `/api/fills` | $0.008 | Recent trade fills for a Hyperliquid wallet: coin, side, size, price, fee, closedPnl, timestamp. |
+| `hyperliquid_get_open_orders` | POST | `/api/orders` | $0.005 | Open orders for a Hyperliquid wallet: coin, side, size, price, order type, reduce-only flag. |
+| `hyperliquid_get_user_funding` | POST | `/api/funding` | $0.005 | Funding payments received/paid by a Hyperliquid wallet: coin, amount, rate, timestamp. |
 
 ### `hyperliquid_get_account_state`
 
