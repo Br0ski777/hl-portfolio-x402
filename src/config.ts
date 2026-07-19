@@ -9,7 +9,7 @@ export const API_CONFIG: ApiConfig = {
     {
       method: "POST",
       path: "/api/account",
-      price: "$0.003",
+      price: "$0.008",
       description: "Full clearinghouse state for a Hyperliquid wallet: positions, margin, PnL, leverage, liquidation prices.",
       toolName: "hyperliquid_get_account_state",
       toolDescription:
@@ -95,7 +95,7 @@ Do NOT use for trade history -- use hyperliquid_get_trade_fills instead. Do NOT 
     {
       method: "POST",
       path: "/api/fills",
-      price: "$0.003",
+      price: "$0.008",
       description: "Recent trade fills for a Hyperliquid wallet: coin, side, size, price, fee, closedPnl, timestamp.",
       toolName: "hyperliquid_get_trade_fills",
       toolDescription:
@@ -177,7 +177,7 @@ Do NOT use for current positions -- use hyperliquid_get_account_state instead. D
     {
       method: "POST",
       path: "/api/orders",
-      price: "$0.002",
+      price: "$0.005",
       description: "Open orders for a Hyperliquid wallet: coin, side, size, price, order type, reduce-only flag.",
       toolName: "hyperliquid_get_open_orders",
       toolDescription:
@@ -254,7 +254,7 @@ Do NOT use for executed trades -- use hyperliquid_get_trade_fills instead. Do NO
     {
       method: "POST",
       path: "/api/funding",
-      price: "$0.002",
+      price: "$0.005",
       description: "Funding payments received/paid by a Hyperliquid wallet: coin, amount, rate, timestamp.",
       toolName: "hyperliquid_get_user_funding",
       toolDescription:
